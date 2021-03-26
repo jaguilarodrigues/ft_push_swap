@@ -16,13 +16,13 @@ jobs:
       - name: Upgrade pip
         run: python3 -m pip install --upgrade pip setuptools
       - name: Install norminette
-        run: python3 -m pip install norminette
+      - run: python3 -m pip install norminette
       - name: Run norminette
-        run: |
+      - run: |
           LOGS=$(mktemp)
           ./linter/norminette.rb $(find -regex '.*/.*\.\(c\|h\)$' -not -path '*/test/*') | tee $LOGS
           echo "ERRORS=$(grep -E 'Error|Warning' $LOGS | wc -l)" >> $GITHUB_ENV
       - name: Checks norminette linter result
-        run: |
+      - run: |
           echo "Norminette errors found: $ERRORS"
           [[ $ERRORS == 0 ]]
