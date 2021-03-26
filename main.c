@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    printf("test norminette again");
+	printf("test norminette again");
 }
