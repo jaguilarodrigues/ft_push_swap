@@ -23,6 +23,6 @@ jobs:
           echo "ERRORS=$(grep -E 'KO!' $LOGS | wc -l)" >> $GITHUB_ENV
       - name: Checks norminette linter result
         run: |
-          echo "Norminette Fail"
+          echo "Norminette Result"
           [[ $ERRORS == 0 ]]
         
