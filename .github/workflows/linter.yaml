@@ -19,7 +19,7 @@ jobs:
       - name: Run norminette
         run: |
           LOGS=$(mktemp)
-          ./linter/norminette.rb $(find -regex '.*/.*\.\(c\|h\)$' -not -path '*/test/*') | tee $LOGS
+          ./linter/norminette $(find -regex '.*/.*\.\(c\|h\)$' -not -path '*/test/*') | tee $LOGS
           echo "ERRORS=$(grep -E 'Error|Warning' $LOGS | wc -l)" >> $GITHUB_ENV
       - name: Checks norminette linter result
         run: |
