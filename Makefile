@@ -6,7 +6,7 @@
 #    By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 20:50:07 by jaqrodri          #+#    #+#              #
-#    Updated: 2021/03/27 21:17:27 by jaqrodri         ###   ########.fr        #
+#    Updated: 2021/03/28 20:41:06 by jaqrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,18 +17,20 @@ CC_FLAGS =	-g \
 			-c \
 			-Wall \
 			-Wextra \
-			-Werror
-			# -I${INCLUDE_DIR}
+			-Werror \
+			-I${INCLUDE_DIR}
 
 SRC_DIR =./srcs
 
-SRCS =	${SRC_DIR}/checker.c
+SRCS =	${SRC_DIR}/ft_putstring.c \
+		${SRC_DIR}/ft_atoi.c \
+		${SRC_DIR}/checker.c
 
 OBJ_DIR = ./objects
 
 OBJ = $(patsubst ${SRC_DIR}/%.c, ${OBJ_DIR}/%.o, $(SRCS))
 
-# INCLUDE_DIR = ./include
+INCLUDE_DIR = ./include
 
 all: $(NAME)
 
