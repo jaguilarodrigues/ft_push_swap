@@ -6,7 +6,7 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 18:33:24 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/03/28 21:15:24 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/03/30 23:20:50 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,24 +45,27 @@ int	validate_input(const char *str)
 	
 }
 
-int	get_stack(int argc, char *argv[])
+int	get_stack(int argc, char *argv[], int *stack_a)
 {
 	int i;
-	// int *stack_a;
+	int j;
+	int num;
 	
-	// alloc stack_a[argc-1]
+	
 	i = 1;
 	while (i < argc)
 	{
 		if (!validate_input(argv[i]))
 			return (0);
-		// save_value()
-		// 	num = (int)ft_atoi(argv[i]);
-		// 	is_duplicado()
-		// 		while (j < i)
-		// 			if (stack_a[j] == num)
-		// 				return(0);
-		// 		stack_a[j] = num;
+		num = (int)ft_atoi(argv[i]);
+		j = 0;
+		while (j < i)
+		{
+			if (stack_a[j] == num)
+				return(0);
+			j++;
+		}
+		stack_a[i - 1] = num;
 		i++;
 	}
 	return(1);
@@ -70,11 +73,21 @@ int	get_stack(int argc, char *argv[])
 
 int	main(int argc, char *argv[])
 {
-	if (argc < 1)
+	int *stack_a;
+	int i;
+	
+	stack_a = (int *) malloc((argc - 1) * sizeof(int));
+	if (argc <= 1)
 		return (error());
-	if(!get_stack(argc, argv))
+	if(!get_stack(argc, argv, stack_a))
 		return (error());
-		
+	// imprime stack
+	i = 0;
+	while (i < (argc - 1))
+	{
+		printf("[%d] %d\n",i, stack_a[i]);
+		i++;
+	}
 	
 	return (0);
 }

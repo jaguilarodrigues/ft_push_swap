@@ -6,7 +6,7 @@
 #    By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 20:50:07 by jaqrodri          #+#    #+#              #
-#    Updated: 2021/03/28 20:41:06 by jaqrodri         ###   ########.fr        #
+#    Updated: 2021/03/29 20:53:07 by jaqrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ CC_FLAGS =	-g \
 
 SRC_DIR =./srcs
 
-SRCS =	${SRC_DIR}/ft_putstring.c \
+SRCS =	${SRC_DIR}/ft_putstring_fd.c \
 		${SRC_DIR}/ft_atoi.c \
 		${SRC_DIR}/checker.c
 
