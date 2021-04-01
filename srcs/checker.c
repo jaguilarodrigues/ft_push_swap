@@ -6,13 +6,13 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 18:33:24 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/03/30 23:20:50 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/03/31 23:15:35 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int	error()
+int	error(void)
 {
 	ft_putstr_fd("Error\n", 1);
 	return (-1);
@@ -20,7 +20,6 @@ int	error()
 
 int	only_digit(const char *str)
 {
-	
 	if (*str == '-')
 		str++;
 	while (*str)
@@ -34,24 +33,22 @@ int	only_digit(const char *str)
 
 int	validate_input(const char *str)
 {
-	long int num;
-	
+	long int	num;
+
 	if (!only_digit(str))
 		return (0);
 	num = ft_atoi(str);
 	if ((num > INT_MAX) || (num < INT_MIN))
 		return (0);
 	return (1);
-	
 }
 
 int	get_stack(int argc, char *argv[], int *stack_a)
 {
-	int i;
-	int j;
-	int num;
-	
-	
+	int	i;
+	int	j;
+	int	num;
+
 	i = 1;
 	while (i < argc)
 	{
@@ -62,32 +59,30 @@ int	get_stack(int argc, char *argv[], int *stack_a)
 		while (j < i)
 		{
 			if (stack_a[j] == num)
-				return(0);
+				return (0);
 			j++;
 		}
 		stack_a[i - 1] = num;
 		i++;
 	}
-	return(1);
+	return (1);
 }
 
 int	main(int argc, char *argv[])
 {
-	int *stack_a;
-	int i;
-	
+	int	*stack_a;
+	int	i;
+
 	stack_a = (int *) malloc((argc - 1) * sizeof(int));
 	if (argc <= 1)
 		return (error());
-	if(!get_stack(argc, argv, stack_a))
+	if (!get_stack(argc, argv, stack_a))
 		return (error());
-	// imprime stack
 	i = 0;
 	while (i < (argc - 1))
 	{
-		printf("[%d] %d\n",i, stack_a[i]);
+		printf("[%d] %d\n", i, stack_a[i]);
 		i++;
 	}
-	
 	return (0);
 }

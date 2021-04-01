@@ -6,27 +6,32 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 19:15:25 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/03/28 20:50:54 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/03/31 23:12:21 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "checker.h"
 
 static int	ft_isaccept(int c)
 {
-	return ((c >= 8 && c <= 13) || c == ' ') ? 1 : 0;
+	if ((c >= 8 && c <= 13) || c == ' ')
+		return (1);
+	else
+		return (0);
 }
 
-int				ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	return (!(c >= '0' && c <= '9')) ? 0 : 1;
+	if (!(c >= '0' && c <= '9'))
+		return (0);
+	else
+		return (1);
 }
 
-long int			ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
-	int sinal;
-	long int num;
+	int			sinal;
+	long int	num;
 
 	sinal = 1;
 	num = 0;

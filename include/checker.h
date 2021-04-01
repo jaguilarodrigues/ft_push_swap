@@ -6,7 +6,7 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 02:45:09 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/03/28 20:42:00 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/03/31 23:07:22 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,8 @@
 # include <limits.h>
 # include <stdio.h>
 
-// #define INT_MAX 2147483647
-// #define INT_MIN -2147483648
-
 void		ft_putstr_fd(char *s, int fd);
 long int	ft_atoi(const char *str);
 int			ft_isdigit(int c);
-
 
 #endif
