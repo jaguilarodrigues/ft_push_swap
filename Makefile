@@ -6,7 +6,7 @@
 #    By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 20:50:07 by jaqrodri          #+#    #+#              #
-#    Updated: 2021/03/29 20:53:07 by jaqrodri         ###   ########.fr        #
+#    Updated: 2021/04/03 12:51:24 by jaqrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC_DIR =./srcs
 
 SRCS =	${SRC_DIR}/ft_putstring_fd.c \
 		${SRC_DIR}/ft_atoi.c \
+		${SRC_DIR}/print_stack.c \
 		${SRC_DIR}/checker.c
 
 OBJ_DIR = ./objects

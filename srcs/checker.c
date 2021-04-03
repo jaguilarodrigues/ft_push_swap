@@ -6,7 +6,7 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 18:33:24 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/03/31 23:15:35 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/04/03 12:51:00 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,18 +71,12 @@ int	get_stack(int argc, char *argv[], int *stack_a)
 int	main(int argc, char *argv[])
 {
 	int	*stack_a;
-	int	i;
 
 	stack_a = (int *) malloc((argc - 1) * sizeof(int));
 	if (argc <= 1)
 		return (error());
 	if (!get_stack(argc, argv, stack_a))
 		return (error());
-	i = 0;
-	while (i < (argc - 1))
-	{
-		printf("[%d] %d\n", i, stack_a[i]);
-		i++;
-	}
+	print_stack(stack_a, argc - 1);
 	return (0);
 }
