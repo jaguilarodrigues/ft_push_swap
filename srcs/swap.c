@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_stack.c                                      :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/03 12:47:41 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/04 01:31:52 by jaqrodri         ###   ########.fr       */
+/*   Created: 2021/04/04 01:36:11 by jaqrodri          #+#    #+#             */
+/*   Updated: 2021/04/04 01:36:12 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	print_stack(t_stack *stack)
+void	swap(t_stack *stack)
 {
-	int	i;
+	int aux;
 
-	i = 0;
-	while (i < stack->len)
+	if (stack->len > 1)
 	{
-		printf("[%d] %d\n", i, stack->stack[i]);
-		i++;
+		aux = stack->stack[0];
+		stack->stack[0] = stack->stack[1];
+		stack->stack[1] = aux;
 	}
 }
