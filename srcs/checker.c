@@ -6,7 +6,7 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 18:33:24 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/04 01:44:10 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/04/04 01:46:28 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,8 @@ int	main(int argc, char *argv[])
 	if (!get_stack(argc, argv, &stack_a))
 		return (error());
 	print_stack(&stack_a);
-	
 	swap(&stack_a);
-	
 	print_stack(&stack_a);
-	
 	free_stack(&stack_a);
 	return (0);
 }

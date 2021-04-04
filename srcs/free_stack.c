@@ -6,7 +6,7 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 01:40:27 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/04 01:40:54 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/04/04 01:47:06 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	free_stack(t_stack *stack)
 {
-	// free(stack->len);
 	free(stack->stack);
 }
