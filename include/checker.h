@@ -6,7 +6,7 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 02:45:09 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/04 01:48:13 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/04/05 22:35:36 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int			ft_isdigit(int c);
 void		print_stack(t_stack *stack);
 void		swap(t_stack *stack);
 void		free_stack(t_stack *stack);
+void		ss(t_stack *stack_a, t_stack *stack_b);
 
 #endif
