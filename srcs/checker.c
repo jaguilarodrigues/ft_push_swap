@@ -6,17 +6,11 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 18:33:24 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/06 21:23:42 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/04/06 21:38:27 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-
-int	error(void)
-{
-	ft_putstr_fd("Error\n", 1);
-	return (-1);
-}
 
 int	only_digit(const char *str)
 {
@@ -67,6 +61,7 @@ int	get_stack(int argc, char *argv[], t_stack *s)
 	}
 	return (1);
 }
+
 void	start_stack(t_stack *s)
 {
 	s->stack = NULL;

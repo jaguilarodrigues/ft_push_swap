@@ -6,7 +6,7 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 02:45:09 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/06 21:10:14 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/04/06 21:42:45 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void		ss(t_stack *stack_a, t_stack *stack_b);
 void		push_stack(int n, t_stack *s);
 int			pop_stack(t_stack *s);
 void		pa(t_stack *s_a, t_stack *s_b);
-
-
+int			error(void);
 
 #endif

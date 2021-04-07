@@ -1,10 +1,10 @@
 #include "checker.h"
 
-int		pop_stack(t_stack *s)
+int	pop_stack(t_stack *s)
 {
-	int *tmp;
-	int top;
-	int i;
+	int	*tmp;
+	int	top;
+	int	i;
 
 	tmp = (int *)malloc((s->len - 1) * sizeof(int));
 	i = 0;
@@ -16,5 +16,5 @@ int		pop_stack(t_stack *s)
 	free(s->stack);
 	s->stack = tmp;
 	s->len--;
-	return(top);
+	return (top);
 }
