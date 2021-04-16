@@ -6,7 +6,7 @@
 #    By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 20:50:07 by jaqrodri          #+#    #+#              #
-#    Updated: 2021/04/15 23:35:21 by jaqrodri         ###   ########.fr        #
+#    Updated: 2021/04/15 23:51:23 by jaqrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC_DIR =./srcs
 SRCS =	${SRC_DIR}/ft_putstring_fd.c \
 		${SRC_DIR}/ft_atoi.c \
 		${SRC_DIR}/print_stack.c \
+		${SRC_DIR}/print_error.c \
 		${SRC_DIR}/free_stack.c \
 		${SRC_DIR}/push_stack.c \
 		${SRC_DIR}/pop_stack.c \
