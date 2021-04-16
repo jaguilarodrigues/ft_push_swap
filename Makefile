@@ -6,7 +6,7 @@
 #    By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 20:50:07 by jaqrodri          #+#    #+#              #
-#    Updated: 2021/04/15 23:51:23 by jaqrodri         ###   ########.fr        #
+#    Updated: 2021/04/16 00:09:32 by jaqrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS =	${SRC_DIR}/ft_putstring_fd.c \
 		${SRC_DIR}/push_stack.c \
 		${SRC_DIR}/pop_stack.c \
 		${SRC_DIR}/rotate_stack.c \
+		${SRC_DIR}/reverse_rotate_stack.c \
 		${SRC_DIR}/swap.c \
 		${SRC_DIR}/pa.c \
 		${SRC_DIR}/ss.c \
