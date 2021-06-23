@@ -1,4 +1,4 @@
-#include "checker.h"
+#include "push_swap.h"
 
 int	pop_stack(t_stack *s)
 {

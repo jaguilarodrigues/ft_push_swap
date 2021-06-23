@@ -1,66 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 18:33:24 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/16 00:41:30 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/06/22 21:42:38 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
-
-int	only_digit(const char *str)
-{
-	if (*str == '-')
-		str++;
-	while (*str)
-	{
-		if (!ft_isdigit(*str))
-			return (0);
-		str++;
-	}
-	return (1);
-}
-
-int	validate_input(const char *str)
-{
-	long int	num;
-
-	if (!only_digit(str))
-		return (0);
-	num = ft_atoi(str);
-	if ((num > INT_MAX) || (num < INT_MIN))
-		return (0);
-	return (1);
-}
-
-int	get_stack(int argc, char *argv[], t_stack *s)
-{
-	int	i;
-	int	j;
-	int	num;
-
-	i = 1;
-	while (i < argc)
-	{
-		if (!validate_input(argv[i]))
-			return (0);
-		num = (int)ft_atoi(argv[i]);
-		j = 0;
-		while (j < i)
-		{
-			if (s->stack[j] == num)
-				return (0);
-			j++;
-		}
-		s->stack[i - 1] = num;
-		i++;
-	}
-	return (1);
-}
+#include "push_swap.h"
 
 void	start_stack(t_stack *s)
 {
@@ -71,6 +21,10 @@ void	start_stack(t_stack *s)
 int	main(int argc, char *argv[])
 {
 	t_stack	stack_a;
+	t_stack	stack_b;
+
+	stack_b.stack = NULL;
+	stack_b.len = 0;
 
 	if (argc <= 1)
 		return (error());
@@ -83,7 +37,7 @@ int	main(int argc, char *argv[])
 	}
 	print_stack(&stack_a);
 	ft_putstr_fd("\n", 1);
-	rotate(&stack_a);
+	cmd("ra", &stack_a, &stack_b);
 	print_stack(&stack_a);
 	ft_putstr_fd("\n", 1);
 	free_stack(&stack_a);

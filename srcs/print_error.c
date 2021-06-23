@@ -1,4 +1,4 @@
-#include "checker.h"
+#include "push_swap.h"
 
 int	error(void)
 {

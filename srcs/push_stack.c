@@ -1,4 +1,4 @@
-#include "checker.h"
+#include "push_swap.h"
 
 void	push_stack(int n, t_stack *s)
 {

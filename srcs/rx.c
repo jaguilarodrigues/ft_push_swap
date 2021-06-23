@@ -1,6 +1,6 @@
-#include "checker.h"
+#include "push_swap.h"
 
-void	rotate(t_stack *s)
+void	rx(t_stack *s)
 {
 	int	i;
 	int	first;
