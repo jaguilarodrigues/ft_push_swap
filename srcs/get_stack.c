@@ -55,13 +55,13 @@ int	get_stack(int argc, char *argv[], t_stack *s)
 			return (0);
 		num = (int)ft_atoi(argv[i]);
 		j = 0;
-		while (j < i)
+		while (j < s->len)
 		{
-			if (s->stack[j] == num)
+			if (s->stack && s->stack[j] == num)
 				return (0);
 			j++;
 		}
-		s->stack[i - 1] = num;
+		push_stack(num, s);
 		i++;
 	}
 	invert_stack(s);
