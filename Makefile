@@ -32,6 +32,7 @@ SRCS =	${SRC_DIR}/push_swap.c \
 		${SRC_DIR}/print_stack.c \
 		${SRC_DIR}/print_error.c \
 		${SRC_DIR}/free_stack.c \
+		${SRC_DIR}/sort.c \
 		${SRC_DIR}/px.c \
 		${SRC_DIR}/rx.c \
 		${SRC_DIR}/rrx.c \

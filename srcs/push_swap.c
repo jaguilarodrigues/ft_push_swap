@@ -26,10 +26,8 @@ int	main(int argc, char *argv[])
 
 	// printf("aaaa\n");
 	t_stack	stack_a;
-	t_stack	stack_b;
 
 	start_stack(&stack_a);
-	start_stack(&stack_b);
 
 	if (argc <= 1)
 		return (error());
@@ -38,11 +36,10 @@ int	main(int argc, char *argv[])
 		free_stack(&stack_a);
 		return (error());
 	}
-	print_stack(&stack_a);
-	ft_putstr_fd("\n", 1);
+
 	// cmd("ra", &stack_a, &stack_b);
-	// print_stack(&stack_a);
-	// ft_putstr_fd("\n", 1);
+	sort(&stack_a);
+
 	free_stack(&stack_a);
 	return (0);
 }

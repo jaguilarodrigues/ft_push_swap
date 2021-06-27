@@ -1,4 +1,3 @@
-
 #include "push_swap.h"
 
 int	only_digit(const char *str)
@@ -29,7 +28,7 @@ int	validate_input(const char *str)
 void	invert_stack(t_stack *s)
 {
 	int	i;
-	int *tmp;
+	int	*tmp;
 
 	i = 0;
 	tmp = (int *) malloc(s->len * sizeof(int));

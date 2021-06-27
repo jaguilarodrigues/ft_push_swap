@@ -44,7 +44,9 @@ void		cmd(char *cmd, t_stack *stack_a, t_stack *stack_b);
 int			error(void);
 
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
-void	invert_stack(t_stack *s);
+void		invert_stack(t_stack *s);
+int			sort(t_stack *stack_a);
+void		start_stack(t_stack *s);
 
 
 #endif
