@@ -6,11 +6,11 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 19:15:25 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/03/31 23:12:21 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/06/09 19:26:18 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "push_swap.h"
 
 static int	ft_isaccept(int c)
 {

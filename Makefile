@@ -6,35 +6,40 @@
 #    By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 20:50:07 by jaqrodri          #+#    #+#              #
-#    Updated: 2021/04/16 00:09:32 by jaqrodri         ###   ########.fr        #
+#    Updated: 2021/06/25 21:47:39 by jaqrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-CC = clang
+CC = gcc
 CC_FLAGS =	-g \
-			-c \
-			-Wall \
-			-Wextra \
-			-Werror \
-			-I${INCLUDE_DIR}
+			-fsanitize=address
+LDFLAGS =	-fsanitize=address
+override CC_FLAGS +=	-c \
+						-Wall \
+						-Wextra \
+						-Werror \
+						-I${INCLUDE_DIR}
 
 SRC_DIR =./srcs
 
-SRCS =	${SRC_DIR}/ft_putstring_fd.c \
+SRCS =	${SRC_DIR}/push_swap.c \
+		${SRC_DIR}/get_stack.c \
+		${SRC_DIR}/pop_stack.c \
+		${SRC_DIR}/push_stack.c \
 		${SRC_DIR}/ft_atoi.c \
 		${SRC_DIR}/print_stack.c \
 		${SRC_DIR}/print_error.c \
 		${SRC_DIR}/free_stack.c \
-		${SRC_DIR}/push_stack.c \
-		${SRC_DIR}/pop_stack.c \
-		${SRC_DIR}/rotate_stack.c \
-		${SRC_DIR}/reverse_rotate_stack.c \
+		${SRC_DIR}/sort.c \
+		${SRC_DIR}/px.c \
+		${SRC_DIR}/rx.c \
+		${SRC_DIR}/rrx.c \
 		${SRC_DIR}/swap.c \
-		${SRC_DIR}/pa.c \
-		${SRC_DIR}/ss.c \
-		${SRC_DIR}/checker.c
+		${SRC_DIR}/cmd.c \
+		${SRC_DIR}/ft_strncmp.c \
+		${SRC_DIR}/ft_putstring_fd.c
 
 OBJ_DIR = ./objects
 
@@ -45,7 +50,7 @@ INCLUDE_DIR = ./include
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -fsanitize=address $^ -o $@
+	$(CC) $(LDFLAGS) $^ -o $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(OBJ_DIR)

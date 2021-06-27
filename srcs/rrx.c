@@ -1,6 +1,6 @@
-#include "checker.h"
+#include "push_swap.h"
 
-void	reverse_rotate(t_stack *s)
+void	rrx(t_stack *s)
 {
 	int	i;
 	int	last;

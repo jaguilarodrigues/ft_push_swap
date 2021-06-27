@@ -1,4 +1,4 @@
-#include "checker.h"
+#include "push_swap.h"
 
 void	push_stack(int n, t_stack *s)
 {
@@ -10,12 +10,12 @@ void	push_stack(int n, t_stack *s)
 		tam = 1;
 	else
 		tam = s->len + 1;
-	i = 1;
+	i = 0;
 	tmp = (int *)malloc(tam * sizeof(int));
-	tmp[0] = n;
-	while (i < tam)
+	tmp[tam - 1] = n;
+	while (i < tam - 1)
 	{
-		tmp[i] = s->stack[i - 1];
+		tmp[i] = s->stack[i];
 		i++;
 	}
 	free(s->stack);

@@ -6,11 +6,11 @@
 /*   By: jaqrodri <jaqrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 01:40:27 by jaqrodri          #+#    #+#             */
-/*   Updated: 2021/04/04 01:47:06 by jaqrodri         ###   ########.fr       */
+/*   Updated: 2021/06/09 19:26:10 by jaqrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "push_swap.h"
 
 void	free_stack(t_stack *stack)
 {
